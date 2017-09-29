@@ -1,0 +1,83 @@
+!! Font
+
+urxvt.font: xft:inconsolata:pixelsize=15
+!urxvt.font: xft:DejaVu Sans Mono:pixelsize=13
+!xft:PragmataPro:size=13, xft:PragmataPro\ for\ Powerline:size=13
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.rgba:       rgb
+Xft.hintstyle:  hintslight
+
+
+!! URXVT settings
+
+urxvt.scrollBar: false
+;urxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=13:weight=bold
+!urxvt.letterSpace: -1
+urxvt.saveLines: 1000000
+urxvt.transparent: false
+!urxvt.shading: 15
+!urxvt.blurRadius: 5
+
+! Ctrl Up and Down control font size
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+! copy paste
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+
+urxvt.internalBorder: 25
+
+! disable ctrl-shift
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt*font: xft:Source Code Pro Medium:size=10:antialias=true:hinting=true,xft:Liberation Mono:size=13:antialias=true:hinting=true
+!URxvt*font xft:terminus:size=25
+
+!! Color Scheme is computer defined. please do not modify
+!! compdc
+
+! black
+*.color0:	#585654
+*.color8:	#585654
+! red
+*color1:	#b45c5c
+*color9:	#b45c5c
+! green
+*color2:	#5cb477
+*color10:	#5cb477
+! yellow
+*color3:	#b4a95c
+*color11:	#b4a95c
+! blue
+*color4:	#5c7db4
+*color12:	#5c7db4
+! magenta
+*color5:	#b45c77
+color13:	#b45c77
+! cyan
+color6:	#5d9eb4
+color14:	#5d9eb4
+! white
+color7:	#ced0cb
+color15:	#ced0cb
+
+*.foreground:	#ced0cb
+*.background:	#5d9eb4
+*.cursorColor:	#5d9eb4
+
+!! compdc
+
+! ROFI Color theme
+! Copyright: Rasmus Steinke
+
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
