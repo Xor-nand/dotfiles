@@ -1,0 +1,58 @@
+#! /usr/bin/env bash
+
+declare -A EXTENSION_DICT=( [tar.xz]="kxJf" [txz]="kxJf" [tar.bz2]="kxjf"
+			    [tar.bz]="kxjf" [tar.gz]="kxzf"
+                            [tgz]="kxzf" [tbz]="kxjf"
+                            [tbz2]="kxjf" [tb2]="kxjf" )
+
+function extract_archive(){
+  read file extension <<<$(echo $1 $2)
+  echo "extracting $file to ${file%$extension}"
+  eval "tar ${EXTENSION_DICT[$extension]} $file"
+}
+
+for file in $*
+do
+  case "$file" in 
+    *tar.xz)
+      extract_archive $file "tar.xz"
+      ;;
+
+    *tar.bz2)
+      extract_archive $file "tar.bz2"
+      ;;
+
+    *tar.bz)
+      extract_archive $file "tar.bz"
+      ;;
+
+    *tar.gz)
+      extract_archive $file "tar.gz"
+      ;;
+
+    *tgz)
+      extract_archive $file "tgz"
+      ;;
+
+    *tbz)
+      extract_archive $file "tbz"
+      ;;
+
+    *tbz2)
+      extract_archive $file "tbz2"
+      ;;
+
+    *tb2)
+      extract_archive $file "tb2"
+      ;;
+
+    *txz)
+      extract_archive $file "txz"
+      ;;
+
+    *)
+      echo "Sorry, unrecognized file format."
+      exit 1
+      ;;
+  esac
+done

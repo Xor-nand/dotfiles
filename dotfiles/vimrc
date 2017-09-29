@@ -1,0 +1,39 @@
+" vim settings for xor-nand
+
+set tabstop=4	    " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set expandtab	    " tabs are spaces
+
+set showcmd	" show commands in bottom bar
+
+set number	    " show line numbers 
+set linebreak	    
+set showbreak=+++
+set textwidth=100
+set showmatch	    " show parenthesis matching
+set visualbell	    " avoid buzzer
+ 
+set hlsearch	    " Highlight all search results 
+set smartcase	    " Enable smart-case search
+set ignorecase	    " Always case-insensitive
+set incsearch	    " Searches for strings incrementally
+ 
+set autoindent	    " Auto-indent new lines
+set shiftwidth=4    " Number of auto-indent spaces
+set smartindent	    " enable smart-indent
+set smarttab	    " Enable smart-tab
+
+set ruler	    " Show row and column ruler information
+ 
+set undolevels=1000 " Number of undo levels
+
+set backspace=indent,eol,start
+
+set cursorline	    " highlight current line
+
+nnoremap < ^	    " remap beginning and end of line
+nnoremap > $
+
+nnoremap $ <nop>
+nnoremap ^ <nop>
+

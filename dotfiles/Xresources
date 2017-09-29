@@ -1,6 +1,6 @@
 !! Font
 
-urxvt.font: xft:inconsolata:pixelsize=15
+urxvt.font: xft:inconsolata:pixelsize=13
 !urxvt.font: xft:DejaVu Sans Mono:pixelsize=13
 !xft:PragmataPro:size=13, xft:PragmataPro\ for\ Powerline:size=13
 

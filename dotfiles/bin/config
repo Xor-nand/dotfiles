@@ -1,0 +1,36 @@
+
+function edit {
+	echo "editing config file"
+	# atom ~/Documents/.config_backup/confignow
+	# return di quache tipo da definire
+}
+
+function create {
+	echo "creating new configfile"
+	read -p " > select a name for the new config file > " conf
+	case $yn in
+		[Yy]* )  read -p " > select a name for the new config file > " conf ; ;;
+		[Nn]* ) echo " > exiting program" ; exit ;;
+		* ) echo " > exiting program" ; exit ;;
+	esac
+	read -p " > select a name for the new config file > " conf
+
+
+}
+
+function mkconfig {
+	# noecho
+	mkdir ~/.configfiles/$1
+	cat ~/configfiles/.pure >> mkdir ~/.configfiles/$1/config
+	return 0
+}
+function upgrade {}
+
+function backup {}
+
+function old {}
+
+case $1 in
+	-e ) edit ;;
+	-u ) update ;;
+	-b ) backup;;

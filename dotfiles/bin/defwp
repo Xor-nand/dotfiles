@@ -1,0 +1,40 @@
+#!/usr/bin/bash
+
+# made by XOR
+# this is a wallpaper setting feature for ranger, usable from terminal or as a script
+
+
+function setwp {
+
+	# check for already present wallpapers
+	if [ -e "~/.wallpaper/currentpape.jpg" ]
+	then
+		rm ~/.wallpaper/*
+	else
+		echo
+	fi
+}
+
+if [ "$1" == "set" ]
+	then
+		feh --bg-fill ~/.wallpaper/currentpape.jpg
+		echo " > default paper set"
+
+elif [ "$1" == "yes" ]
+	then
+		setwp $2
+
+elif [ -e $1 ]
+	then
+		read -p " > setting $1 as wallpaper, continue? (Y/N) > " yn
+		case $yn in
+			[Yy]* ) setwp $1;;
+			[Nn]* ) echo " > exiting program" ; exit ;;
+			* ) echo " > exiting program" ; exit ;;
+		esac
+else
+	echo " > file does not exist"
+	return 1
+fi
+
+wal -i

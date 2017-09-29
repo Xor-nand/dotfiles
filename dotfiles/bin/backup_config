@@ -1,0 +1,24 @@
+
+rm -r ~/.old.dotfiles
+echo "deleted old dotfiles"
+mv ~/.dotfiles ~/.old.dotfiles
+mkdir ~/.dotfiles
+
+mkdir ~/.dotfiles/ranger
+cp ~/.config/ranger/rc.conf ~/.dotfiles/ranger/
+
+mkdir ~/.dotfiles/polybar
+cp ~/.config/polybar/config ~/.dotfiles/polybar/
+
+mkdir ~/.dotfiles/i3
+cp ~/.config/i3/config ~/.dotfiles/i3/
+
+mkdir ~/.dotfiles/bin
+cp /usr/local/bin/* ~/.dotfiles/bin
+
+cp ~/.Xresources ~/.dotfiles/Xresources
+cp ~/.vimrc ~/.dotfiles/vimrc
+cp ~/.zshrc ~/.dotfiles/zshrc
+
+rm -r ~/dotfiles/dotfiles
+cp -r ~/.dotfiles ~/dotfiles/dotfiles

@@ -1,0 +1,1 @@
+pipes.sh -p $1 -t 4 -f 20
